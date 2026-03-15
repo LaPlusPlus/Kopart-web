@@ -44,18 +44,10 @@ nav ul li a:hover { color: var(--blue); }
 .btn-outline { border: 2px solid var(--blue); color: var(--blue); padding: 14px 40px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
 .btn-outline:hover { background: var(--blue); color: white; }
 
-/* Services & Tabs */
+/* Services */
 .services { padding: 100px 0; background: var(--gray); }
-.section-title { text-align: center; margin-bottom: 40px; font-size: 2.8rem; color: var(--blue); position: relative; }
+.section-title { text-align: center; margin-bottom: 60px; font-size: 2.8rem; color: var(--blue); position: relative; }
 .section-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--yellow); margin: 15px auto 0; }
-
-.tabs-container { display: flex; justify-content: center; gap: 15px; margin-bottom: 50px; }
-.tab-btn { padding: 12px 35px; border: 2px solid var(--blue); background: transparent; color: var(--blue); font-weight: bold; border-radius: 50px; cursor: pointer; transition: 0.3s; font-family: inherit; font-size: 1rem; }
-.tab-btn.active { background: var(--blue); color: var(--white); box-shadow: 0 5px 15px rgba(0, 43, 91, 0.2); }
-.tab-btn:hover:not(.active) { background: rgba(0, 43, 91, 0.05); }
-
-.tab-content { display: none; opacity: 0; transform: translateY(15px); transition: 0.5s ease; }
-.tab-content.active { display: block; opacity: 1; transform: translateY(0); }
 
 .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 .service-card { background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: 0.4s; display: flex; flex-direction: column; }
@@ -68,7 +60,7 @@ nav ul li a:hover { color: var(--blue); }
 .card-body { padding: 30px; text-align: center; flex-grow: 1; }
 .icon-box { width: 70px; height: 70px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: -65px auto 20px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 3px solid var(--yellow); }
 .icon-box i { font-size: 28px; color: var(--blue); transition: 0.3s; }
-.service-card:hover .icon-box i { transform: scale(1.1); }
+.service-card:hover .icon-box i { transform: scale(1.1); color: var(--blue); }
 
 /* About Section */
 .about { padding: 100px 0; background: var(--white); }
@@ -82,9 +74,13 @@ nav ul li a:hover { color: var(--blue); }
 .stat-item { background: var(--blue); color: white; padding: 30px 10px; border-radius: 20px; text-align: center; flex: 1; border-bottom: 5px solid var(--yellow); }
 .stat-item b { font-size: 2.5rem; color: var(--yellow); display: block; }
 
-/* Contact Section */
+/* Contact Section (Исправлено) */
 .contact { padding: 100px 0; background: var(--blue); color: var(--white); }
+
+/* Текст заголовка в контактах - теперь белый */
 .contact .section-title { color: var(--white); }
+.contact .section-title::after { background: var(--yellow); }
+
 .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; }
 .info-box { display: flex; gap: 20px; margin-bottom: 30px; align-items: center; }
 .info-box i { font-size: 1.3rem; color: var(--yellow); background: rgba(255,255,255,0.1); width: 45px; height: 45px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
@@ -110,6 +106,4 @@ footer strong { color: var(--white); }
     .hero h1 { font-size: 2.2rem; }
     .hero-btns { flex-direction: column; padding: 0 10px; }
     .section-title { font-size: 2.2rem; }
-    .tabs-container { flex-direction: column; align-items: center; }
-    .tab-btn { width: 100%; max-width: 300px; }
 }
